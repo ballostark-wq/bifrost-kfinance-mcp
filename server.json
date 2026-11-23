@@ -1,9 +1,19 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.ballostark-wq/bifrost-kfinance-mcp",
-  "title": "Bifrost K-Finance & x402 Alpha",
-  "description": "Live Korea OpenDART filings, BOK ECOS FX/yields, and US-KR HBM supply-chain tools via x402 USDC.",
-  "version": "2.0.0",
+  "title": "Bifrost K-Finance & Korea Customs x402",
+  "description": "Korea Customs HS trade, OpenDART filings, BOK FX/yields & AI supply-chain tools via x402 USDC.",
+  "version": "2.1.2",
+  "websiteUrl": "https://bifrost-x402-production.up.railway.app",
+  "icons": [
+    {
+      "src": "https://bifrost-x402-production.up.railway.app/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "96x96"
+      ]
+    }
+  ],
   "repository": {
     "url": "https://github.com/ballostark-wq/bifrost-kfinance-mcp",
     "source": "github"
