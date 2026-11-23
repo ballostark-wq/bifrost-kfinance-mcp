@@ -3,7 +3,7 @@
   "name": "io.github.ballostark-wq/bifrost-kfinance-mcp",
   "title": "Bifrost K-Finance, Customs & ISO 20022 x402",
   "description": "Korea Customs, OpenDART, BOK FX & ISO 20022 SEPA/MT940 financial tools via x402 USDC.",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "websiteUrl": "https://bifrost-x402-production.up.railway.app",
   "icons": [
     {
