@@ -1,9 +1,9 @@
 # Bifrost K-Finance & Korea Customs Trade Server (x402 + Remote MCP)
 
-[![Bifrost K-Finance MCP connector](https://glama.ai/mcp/connectors/app.railway.up.bifrost-x402-production/bifrost-kfinance-mcp/badges/score.svg)](https://glama.ai/mcp/connectors/app.railway.up.bifrost-x402-production/bifrost-kfinance-mcp)
-[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/ballostark-wq/bifrost-kfinance-mcp)
+[[https://glama.ai/mcp/connectors/app.railway.up.bifrost-x402-production/bifrost-kfinance-mcp/badges/score.svg]](https://glama.ai/mcp/connectors/app.railway.up.bifrost-x402-production/bifrost-kfinance-mcp)
+[[https://mcpservers.org/badge.svg]](https://mcpservers.org/servers/ballostark-wq/bifrost-kfinance-mcp)
 
-Machine-readable **Korea Customs Service HS 2–10 Digit Export/Import Series (with HSK-10 Breakdown & $/kg ASP YoY)**, **FSS OpenDART Corporate Regulatory Disclosures**, **Bank of Korea Macro/FX Yields (ECOS)**, **US-to-Korea AI Supply-Chain Mapping**, and **Stateless ISO 20022 (`pain.001.001.09`, `pacs.008`, `camt.053`, `SWIFT MT940`) Banking Validation & Conversion** — payable per request via **Coinbase x402 (`USDC` on Base Mainnet `eip155:8453`)** with zero API keys, zero subscriptions, and gasless EIP-3009 settlement.
+Machine-readable **Korea Customs Service HS 2–10 Digit Export/Import Series (with HSK-10 Breakdown & $/kg ASP YoY)**, **FSS OpenDART Corporate Regulatory Disclosures**, **Bank of Korea Macro/FX Yields (ECOS)**, **US-to-Korea AI Supply-Chain Mapping**, **Base/Ethereum/Arbitrum Pre-Swap Token Verdict & Spender Drainer Firewall**, and **Stateless ISO 20022 (`pain.001`, `pacs.008`, `camt.053`, `MT940`) Banking Bridge** — payable per request via **Coinbase x402 (`USDC` on Base Mainnet `eip155:8453`)** with zero API keys, zero subscriptions, and gasless EIP-3009 settlement.
 
 <!-- mcp-name: io.github.ballostark-wq/bifrost-kfinance-mcp -->
 
@@ -14,6 +14,7 @@ Machine-readable **Korea Customs Service HS 2–10 Digit Export/Import Series (w
 * **Remote MCP Endpoint (Streamable HTTP)**: `https://bifrost-x402-production.up.railway.app/mcp`
 * **AI Discovery Guide (`llms.txt`)**: `https://bifrost-x402-production.up.railway.app/llms.txt`
 * **Free Customs 3M Sample (REST)**: `https://bifrost-x402-production.up.railway.app/v1/kr-customs-trade-sample`
+* **Free EVM Risk Firewall Sample (REST)**: `https://bifrost-x402-production.up.railway.app/v1/evm-risk-sample`
 * **Free ISO 20022 Spec Sample (REST)**: `https://bifrost-x402-production.up.railway.app/v1/iso20022-sample`
 * **OpenAPI Spec**: `https://bifrost-x402-production.up.railway.app/openapi.json`
 * **Health & Readiness**: `https://bifrost-x402-production.up.railway.app/health`
@@ -25,6 +26,8 @@ Machine-readable **Korea Customs Service HS 2–10 Digit Export/Import Series (w
 | `POST /v1/kr-disclosure-radar` (`kr_disclosure_radar`) | `$0.06` | Live **FSS OpenDART** KRX corporate filings translated into structured English alpha signals (`BUYBACK_BULLISH`, `CONTRACT_WIN_BULLISH`, `RIGHTS_ISSUE_DILUTION_BEARISH`). |
 | `POST /v1/kr-catalyst-brief` (`kr_catalyst_brief`) | `$0.08` | Cross-border **US-to-Korea supply-chain mapping** (`NVDA`, `MU`, `MSFT`, `TSLA`, `AAPL`, `LLY`, `LMT`, `AVGO` -> Tier-1 KRX HBM, transformer, CDMO & defense beneficiaries) + daily refreshed Korea export/macro catalyst calendar. |
 | `POST /v1/kr-macro-pulse` (`kr_macro_pulse`) | `$0.05` | Live **Bank of Korea ECOS** policy base rate, `USD/KRW` & `JPY/KRW` FX rates, KTB 3Y/10Y sovereign yields, term spread in bps, and exporter FX regime. |
+| `POST /v1/evm-token-verdict` (`evm_token_verdict`) | `$0.015` | Pre-swap **Base (8453), Ethereum (1) & Arbitrum (42161) ERC-20 Token Verdict**: detects live honeypot sell blocks, EIP-1967 proxies, `mint`/`blacklist`/`setTax` bytecode selectors, Sourcify verification, and DEX pool liquidity. |
+| `POST /v1/evm-spender-firewall` (`evm_spender_firewall`) | `$0.02` | Pre-signature **EVM Approve, Permit2 & Router Spender Firewall**: inspects spender bytecode & calldata for unverified drainers, unlimited `MAX_UINT256` grants, `SELFDESTRUCT`, and proxy traps (`ALLOW / WARN / BLOCK`). |
 | `POST /v1/iso20022-generate-pain001` (`iso20022_generate_pain001`) | `$0.04` | Stateless JSON-to-**ISO 20022 `pain.001.001.09`** XML generator with exact Decimal `CtrlSum`, Swiss SPS 2026 & EPC SEPA structured addresses, IBAN Mod-97, and SCOR/QRR validation (`0 Bytes` retention). |
 | `POST /v1/iso20022-audit-and-parse` (`iso20022_audit_and_parse`) | `$0.03` | Deterministic XPath compliance auditor & JSON normalizer for **`pain.001`, `pacs.008`, and `camt.053`** XML (SPS 2026 structured address, IBAN Mod-97, Swiss QR-IBAN/QRR, exact balance reconciliation). |
 | `POST /v1/mt940-to-camt053-bridge` (`mt940_to_camt053_bridge`) | `$0.03` | Legacy **SWIFT `MT940` to ISO 20022 `camt.053.001.08`** XML & JSON statement converter with SEPA `:86:` tag extraction and lossless `raw_narrative` preservation. |
@@ -43,7 +46,7 @@ Machine-readable **Korea Customs Service HS 2–10 Digit Export/Import Series (w
   "mcpServers": {
     "bifrost-kfinance": {
       "type": "streamable-http",
-      "url": "https://bifrost-x402-production.up.railway.app/mcp"
+      "url": "[https://bifrost-x402-production.up.railway.app/mcp](https://bifrost-x402-production.up.railway.app/mcp)"
     }
   }
 }
@@ -56,7 +59,7 @@ import { CdpX402Client } from "@coinbase/cdp-sdk/x402";
 import { wrapFetchWithPayment } from "@x402/fetch";
 
 const fetch402 = wrapFetchWithPayment(fetch, new CdpX402Client());
-const res = await fetch402("https://bifrost-x402-production.up.railway.app/v1/kr-customs-trade-snapshot", {
+const res = await fetch402("[https://bifrost-x402-production.up.railway.app/v1/kr-customs-trade-snapshot](https://bifrost-x402-production.up.railway.app/v1/kr-customs-trade-snapshot)", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ theme: "AI_MEMORY_HBM", partner: "US", months: 24 }),
