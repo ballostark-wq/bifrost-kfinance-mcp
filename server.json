@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.ballostark-wq/bifrost-kfinance-mcp",
-  "title": "Bifrost K-Finance, Customs & ISO 20022 x402",
-  "description": "Korea Customs, OpenDART, BOK FX & ISO 20022 SEPA/MT940 financial tools via x402 USDC.",
-  "version": "2.2.1",
+  "title": "Bifrost K-Finance, EVM Firewall & ISO 20022 x402",
+  "description": "Korea Customs/DART, Base/EVM token-spender firewall & ISO 20022 tools via x402 USDC.",
+  "version": "2.3.2",
   "websiteUrl": "https://bifrost-x402-production.up.railway.app",
   "icons": [
     {
