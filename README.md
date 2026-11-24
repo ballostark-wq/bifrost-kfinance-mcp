@@ -1,7 +1,10 @@
 # Bifrost K-Finance & Korea Customs Trade Server (x402 + Remote MCP)
 
 [![Bifrost K-Finance MCP connector](https://glama.ai/mcp/connectors/app.railway.up.bifrost-x402-production/bifrost-kfinance-mcp/badges/score.svg)](https://glama.ai/mcp/connectors/app.railway.up.bifrost-x402-production/bifrost-kfinance-mcp)
+[![mcptry](https://mcptry.com/badge/io.github.ballostark-wq/bifrost-kfinance-mcp)](https://mcptry.com/servers/io.github.ballostark-wq/bifrost-kfinance-mcp)
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/ballostark-wq/bifrost-kfinance-mcp)
+
+[![Bifrost K-Finance & Korea Customs x402 MCP server](https://mcprush.com/badge/bifrost-k-finance-x402-alpha-mcp/card.svg)](https://mcprush.com/to/bifrost-k-finance-x402-alpha-mcp?ref=badge)
 
 Machine-readable **Korea Customs Service HS 2–10 Digit Export/Import Series (with HSK-10 Breakdown & $/kg ASP YoY)**, **FSS OpenDART Corporate Regulatory Disclosures**, **Bank of Korea Macro/FX Yields (ECOS)**, **US SEC EDGAR XBRL Financials & Decoded Form 8-K Filings**, **US-to-Korea AI Supply-Chain Mapping**, **Base/Ethereum/Arbitrum & Solana (`Token-2022`) Pre-Swap Firewall**, **US Treasury OFAC SDN & GLEIF LEI Sanctions Gate**, **HTTPS DoH Domain/Email MX·SPF·DMARC 10-Batch Firewall**, and **Stateless ISO 20022 (`pain.001`, `pacs.008`, `camt.053`, `MT940`) Banking Bridge** — payable per request via **Coinbase x402 (`USDC` on Base Mainnet `eip155:8453`)** with zero API keys, zero subscriptions, and gasless EIP-3009 settlement.
 
@@ -11,6 +14,7 @@ Machine-readable **Korea Customs Service HS 2–10 Digit Export/Import Series (w
 
 * **Service Overview (`200 OK`)**: `https://bifrost-x402-production.up.railway.app/`
 * **x402 Domain Manifest (`.well-known`)**: `https://bifrost-x402-production.up.railway.app/.well-known/x402`
+* **Glama Connector Verification (`.well-known`)**: `https://bifrost-x402-production.up.railway.app/mcp/.well-known/glama.json`
 * **Remote MCP Endpoint (Streamable HTTP)**: `https://bifrost-x402-production.up.railway.app/mcp`
 * **AI Discovery Guide (`llms.txt`)**: `https://bifrost-x402-production.up.railway.app/llms.txt`
 * **Free Customs 3M Sample (REST)**: `https://bifrost-x402-production.up.railway.app/v1/kr-customs-trade-sample`

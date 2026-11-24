@@ -3,7 +3,7 @@
   "name": "io.github.ballostark-wq/bifrost-kfinance-mcp",
   "title": "Bifrost K-Finance, US SEC XBRL, Web3/OFAC & ISO 20022",
   "description": "K-Customs/DART, US SEC XBRL, EVM/Solana, OFAC/LEI, DoH & ISO 20022 via x402 USDC.",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "websiteUrl": "https://bifrost-x402-production.up.railway.app",
   "icons": [
     {
